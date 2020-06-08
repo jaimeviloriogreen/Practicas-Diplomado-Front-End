@@ -6,11 +6,6 @@
     --color5: #c71518;
     --color6: #e25052;
     --color7: #aa0204;
-    --color8: #3b8686;
-    --color9: #79bd9a;
-    --color10:#a8dba8;
-    
-
     --fuente1:'Roboto', sans-serif;
     --fuente2:'Open Sans', sans-serif;
 }
@@ -35,13 +30,13 @@ body{
     text-align: center;
     background-color: var(--color4);
     color: var(--color1);
-    padding: 10px;
+    padding: 0.625rem;
     border-radius: 5px;
     margin-bottom: 1rem;
 }
 
 .titulo h1{
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-family: var(--fuente2);
     font-weight: 700;
 }
@@ -76,8 +71,8 @@ input[type="text"],[type="email"], textarea, [type="submit"], [type="reset"]{
 }
 textarea{
     resize: vertical;
-    max-height: 150px;
-    min-height: 150px;
+    max-height: 9.375rem;
+    min-height: 9.375rem;
     overflow: scroll;
 }
 
@@ -92,4 +87,15 @@ input[type="submit"]{
 }
 input[type="submit"]:hover{
     background-color: var(--color7);
+}
+
+@media screen and (max-width:780px){
+    html{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:480px){
+    html{
+        font-size: 12px;
+    }
 }
