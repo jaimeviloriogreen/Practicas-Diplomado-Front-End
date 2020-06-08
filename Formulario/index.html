@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Formulario</title>
 </head>
 <body>
-<main>
-    <section>
+<main class="contenedor">
+    <section class="titulo">
         <h1>Formulario de Contacto</h1>
     </section>
 
-    <section>
+    <section class="formulario">
         <form action="mailto:jaimeviloriogreen@gmail.com" method="POST" enctype="text/plain">
             <fieldset>
                 <legend>Contáctame</legend>
@@ -34,13 +36,10 @@
                 </p>
                 <p>
                     <label for="comentarios">Comentarios</label><br>
-                    <textarea name="comentarios" id="comentarios" cols="30" rows="10" placeholder="comentarios"></textarea>
+                    <textarea name="comentarios" id="comentarios"></textarea>
                 </p>
                 <p>
                     <input type="submit" value="Enviar"><br>
-                    <br>
-                    <button type="reset">Limpiar</button>
-
                 </p>
             </fieldset>
         </form>
