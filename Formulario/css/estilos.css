@@ -36,8 +36,7 @@ body{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 6.5rem 1fr;
     grid-template-areas: 'a a'
-                          'b b';
-                         
+                          'b b';                       
 }
 .titulo{
     grid-area: a;
@@ -120,9 +119,6 @@ input[type="submit"]:hover{
 input[type="submit"]{
     transition: background-color 400ms ease-in;
 }
-
-
-
 .info{
     display: flex;
     flex-flow: column nowrap;
@@ -130,7 +126,6 @@ input[type="submit"]{
     justify-content: center;
     padding: 1.875rem;
 }
-
 span{
     width: 100%;
     display: flex;
@@ -148,14 +143,12 @@ span p{
     font-style: normal;
     color: var(--color3);
     letter-spacing: 0.0625rem;
-
 }
 span i{
     padding-right: 0.625rem;
     color: var(--color3);
     font-size: 1rem;
 }
-
 .redes{
     height: 30%;
     width: 70%;
@@ -165,7 +158,6 @@ span i{
     justify-content: space-evenly;
     align-items: center;
 }
-
 .redes i{
     cursor: pointer;
 }
@@ -180,12 +172,12 @@ span i{
     color: #D05260;
 }
 
+/* Medias Queries */
 @media screen and (max-width:1080px){
     html{
         font-size: 14px;
     }
 }
-
 @media screen and (max-width:920px){
     html{
         font-size: 13px;
@@ -197,7 +189,6 @@ span i{
         grid-template-rows: 6rem 1fr;
         margin: 3.125rem auto;
     }
-
     .secionFormulario{
         width: 100%;
         grid-template-areas: 'd d'
@@ -219,12 +210,12 @@ span i{
         font-size: 12px;
     }
 }
-
 @media screen and (max-width:480px){
     html{
         font-size: 10px;
     }
 }
+/* Fin */
 
 
 
