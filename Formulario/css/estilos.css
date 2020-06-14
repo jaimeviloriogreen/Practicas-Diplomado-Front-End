@@ -2,7 +2,7 @@
     --color1: #ffffff;
     --color2: #000000;
     --color3: #1D3557;
-    --color4: #24416b;
+    --color4: #30507e;
     --color5: #a8dadc;
     --color6: #F1FAEE;
     --color7: #b61624;
@@ -111,10 +111,17 @@ input[type="submit"]{
     color: var(--color1);
     border-radius: 3px;
     cursor: pointer;
+    
 }
 input[type="submit"]:hover{
     background-color:var(--color4);
 }
+
+input[type="submit"]{
+    transition: background-color 400ms ease-in;
+}
+
+
 
 .info{
     display: flex;
@@ -198,11 +205,12 @@ span i{
         padding: 1.25rem 1.125rem 1.25rem 1.25rem;
     }
     .informacion{
+        height: 100%;
         width: 100%;
-        padding-top: 20px;
+        padding-top: 30px;
     }
     .redes{
-        height: 30%;
+        height: 60%;
         width: 100%;
     }
 }
