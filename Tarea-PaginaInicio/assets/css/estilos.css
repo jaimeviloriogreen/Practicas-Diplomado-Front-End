@@ -4,9 +4,9 @@
     --color3: #F0F3F5;
 
     --color4: #001B2E;
-    --color5: #567191;
+    --color5: #1b476e;
     --color6: #ADB6C4;
-    --color7: #FFEFD3;
+    --color7: #cff09e;
     --color8: #cf3847;
 
     --fuente1:'Raleway', sans-serif;
@@ -32,7 +32,26 @@ body{
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
+    position: relative;
 }
+
+.menu::after{
+    content: '';
+    display: block;
+    /* background-color: #000000;
+    height: 40px;
+    width: 40px; */
+    border-top: 20px solid var(--color8);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+
+    position: absolute;
+    bottom: -50%;
+    right: calc(50% - 20px);
+}
+
+
 .logo{
     width: 100%;
     height: 100%;
@@ -75,20 +94,18 @@ body{
     text-transform: uppercase;
     color: var(--color1);
     display:inline-block;
-    padding: .3rem .7rem;
-    
-    
+    padding: .3rem .6rem;
+    border: 1px solid transparent;
 } 
 
 .items li > a:hover{
     border-radius: 2px;
     border: 1px solid var(--color1);
-    background-color: var(--color8);
-    
+    background-color: var(--color8);   
 }
 
 .items li > a{
-    transition: all 500ms ease;
+    transition: border 600ms ease-in-out;
 }
 
 /* Contenido Principañ */
@@ -97,16 +114,53 @@ body{
     max-width: 1500px;
     height: 70vh;
     margin: 2rem auto;
-    background-color: var(--color3);
+    background-color: var(--color5);
     border-radius: 5px;
-    box-shadow: 0px 10px 24px 0px rgba(0,0,0,.3);
+    /* box-shadow: 0px 10px 24px 0px rgba(0,0,0,.3); */
+
     /* Grid */
     display: grid;
     grid-template-columns: 1fr 5px 1fr;
     grid-template-rows: auto;
     grid-template-areas: 'a b c';
     grid-gap: 20px;
+
+    /* pseudo elementos */
+    position: relative;
 }
+
+.cotenidoPrincipal::after{
+    content: '';
+    display: block;
+    /* background-color: #000000;
+    height: 40px;
+    width: 40px; */
+
+    border-top: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid var(--color3);
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+
+.cotenidoPrincipal::before{
+    content: '';
+    display: block;
+    /* background-color: #000000;
+    height: 40px;
+    width: 40px; */
+    border-top: 20px solid var(--color3);
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+
+    position: absolute;
+    right: calc(50% - 20px);
+}
+
+
 .foto-redes{
     grid-area: a;
     display: flex;
@@ -168,10 +222,43 @@ body{
     padding: 0px 4rem;
 }
 
+.bio  p{
+    font-family: var(--fuente1);
+    line-height: 2;
+    letter-spacing: 1px;
+    color: var(--color3);
+}
+
+.bio strong{
+    color: var(--color7);
+}
+
 .datosPersonales{
     width: 100%;
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+    align-items: start;
+}
+.nombre-ocupacion{
+    width: 100%;
+    height: 15%;
+}
+.nombre{
+    display: flex;
+}
+.nombre p:nth-child(1){
+    padding-right: 10px;
+}
+.ocupacion p:nth-child(1){
+    padding-right: 10px;
+}
+
+.ocupacion{
+    display: flex;
+}
+
+.descripcion{
+    height: 45%;
 }
