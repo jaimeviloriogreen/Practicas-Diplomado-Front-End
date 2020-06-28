@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Tarea-PaginaInicio/assets/css/estilos.css">
+</head>
+<body>
+<main>
+    <header class="menu">
+        <section class="logo">
+            <h1><a href="/Tarea-PaginaInicio/index.html">Jaime Vilorio</a></h1>
+        </section>
+
+        <nav class="navegacion">
+            <ul class="items">
+                <li class="listas"><a href="#">Tarea # 1</a></li>
+                <li class="listas"><a href="#">Tarea # 2</a></li>
+                <li class="listas"><a href="#">Tarea # 3</a></li>
+                <li class="listas"><a href="#">Tarea # 4</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section class="contenedorTarea1">
+        <section>
+            <h1>Formulario de Contacto</h1>
+        </section>
+        <form action="mailto:jaimeviloriogreen@gmail.com" method="POST" enctype="text/plain">
+            <fieldset>
+                <legend>Contáctame</legend>
+                <p>
+                    <label for="nombre">Nombre</label><br>
+                    <input name="nombre" type="text" placeholder="Nombre" id="nombre">
+                </p>
+                <p>
+                    <label for="apellido">Apellido</label><br>
+                    <input name="apellido" type="text" placeholder="Apellido" id="apellido">
+                </p>
+                <p>
+                    <label for="email">Email</label><br>
+                    <input name="email" type="email" placeholder="Email" id="email">
+                </p>
+                
+                <p>
+                    <label for="asunto">Asunto</label><br>
+                    <input name="asunto" type="text" placeholder="Asunto" id="asunto">
+                </p>
+                <p>
+                    <label for="comentarios">Comentarios</label><br>
+                    <textarea name="comentarios" id="comentarios" cols="30" rows="10" placeholder="comentarios"></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Enviar"><br>
+                    <br>
+                    <button type="reset">Limpiar</button>
+
+                </p>
+            </fieldset>
+        </form>
+    </section>
+</main>
+
+
+    
+</body>
+</html>

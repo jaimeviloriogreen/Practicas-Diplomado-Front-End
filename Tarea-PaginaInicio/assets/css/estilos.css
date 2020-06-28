@@ -50,12 +50,9 @@ body{
     bottom: -50%;
     right: calc(50% - 20px);
 }
-
-
 .logo{
     width: 100%;
     height: 100%;
-    color: var(--color1);
     display: flex;
     justify-content: start;
     align-items: center;
@@ -67,6 +64,11 @@ body{
     font-family: var(--fuente2);
     font-weight: 400;
     letter-spacing: 1px;
+}
+
+.logo h1 > a{
+    text-decoration: none;
+    color: var(--color1);
 }
 
 .navegacion{
@@ -262,3 +264,21 @@ body{
 .descripcion{
     height: 45%;
 }
+
+/* Estilos Tarea 1 */
+.contenedorTarea1{
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 10px;
+}
+
+.contenedorTarea1 h1{
+    font-size: 2rem;
+    padding: .8rem 0px;
+    text-align: center;
+}
+.contenedorTarea1 form fieldset{
+    padding: 1rem;
+}
+
