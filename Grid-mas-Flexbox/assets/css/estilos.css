@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --color1: #ffffff;
+    --color2: #000000;
+    --color3: #f1f1f1;
+    --color4: #2a3d54;
+    --color5: #e0e0e0;
+
+    --Titulo: "Passion One", cursive;
+    --Cuerpo: "Quicksand", sans-serif;
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+
+body{
+    background-color: var(--color3);
+}
+.seccionFormulario{
+    width: 60%;
+    max-width: 43.75rem;
+    margin:9.375rem auto;
+    background-color: var(--color1);
+    border-radius: 0.8rem;
+    box-shadow: 0px 10px 30px -10px rgba(0,0,0,0.4);
+    
+    /* GRID */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 28.125rem;
+    /* gap: 1rem; */
+    grid-template-areas: "a b";
+}
+
+.redesSociales{
+    grid-area: b;
+    background-color: var(--color4);
+    border-top-right-radius: .8rem;
+    border-bottom-right-radius: .8rem;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 2rem;
+}
+.redesSociales h2{
+    color: var(--color1);
+    font-family: var(--Titulo);
+    font-weight: 100;
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+.redesSociales .items{
+    width: 50%;
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.redesSociales .items i{
+    flex-grow: 1;
+    text-align: center;
+    color: var(--color1);
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+
+.formulario{
+    grid-area: a;
+    align-self: center;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px 2rem;
+}
+
+.formulario .nombre, 
+.formulario .apellido, 
+.formulario .comentario{
+    width: 100%;
+    height: auto;
+    font-family: var(--Cuerpo);
+}
+
+.formulario p > textarea{
+    resize: vertical;
+    min-height: 6.25rem;
+    max-height: 6.25rem;
+}
+
+.formulario input[type="text"], textarea{
+    width: 100%;
+    font-family: var(--Cuerpo);
+    font-size: 1rem;
+    padding:5px;
+    margin-top: .2rem;
+    border: 1px solid var(--color5);
+    border-radius: 3px;
+}
+
+.formulario input[type="submit"]{
+    border: none;
+    background-color: var(--color4);
+    color: var(--color1);
+    font-family: var(--Cuerpo);
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 5px 20px;
+    margin-top: 1.5rem;  
+    border-radius: 50px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+}
+
+.formulario input[type="submit"]:hover{
+    background-color: var(--color1);
+    color: var(--color4);
+    border: 2px solid var(--color4);
+    font-weight: 700;
+}
+
+.formulario input[type="submit"]{
+    transition: all 600ms ease-in-out;
+}
+
+
+
