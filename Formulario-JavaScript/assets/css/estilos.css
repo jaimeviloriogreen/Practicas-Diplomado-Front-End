@@ -1,0 +1,222 @@
+:root{
+    --color1: #ffffff;
+    --color2: #000000;
+    --color3: #1D3557;
+    --color4: #30507e;
+    --color5: #a8dadc;
+    --color6: #F1FAEE;
+    --color7: #b61624;
+    --color8: #bdbec0;
+    --color9: #ce1625;
+    --fuente: 'Raleway', sans-serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+body{
+    background-image: url("/Formulario-JavaScript/assets/img/img02.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover; 
+}
+.contenidoPrincipal{
+    width: 90%;
+    height: auto;
+    max-width: 62.5rem;
+    margin: 4.6875rem auto;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.822);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 6.5rem 1fr;
+    grid-template-areas: 'a a'
+                          'b b';                       
+}
+.titulo{
+    grid-area: a;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+h1{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: var(--fuente);
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--color3);
+}
+.cuerpoFormulario{
+    grid-area: b;
+}
+.secionFormulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'c d';
+    padding:1.25rem 3.125rem 1.25rem 1.25rem;
+}
+.informacion{
+    grid-area: c;
+}
+.formulario{
+    grid-area: d;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.formulario > input{
+    font-size: 1.35rem;
+    padding: 0.3125rem 0.625rem;
+    margin: 0.3125rem 0px;
+    width: 100%;
+    font-family: var(--fuente);
+    font-weight: 400;
+    border:1px solid var(--color8);  
+}
+.formulario > input::placeholder{
+    font-size: .9rem;
+    opacity: .3;
+}
+.formulario > textarea{
+    width: 100%;
+    resize: vertical;
+    max-height: 200px;
+    min-height: 200px;
+    overflow: scroll;
+    font-size: 1.25rem;
+    padding: 0.3125rem 0.625rem;
+    margin: 0.3125rem 0px;
+    font-family: var(--fuente);
+    font-weight: 400;
+    border:1px solid var(--color8);
+}
+.formulario > textarea::placeholder{
+    font-size: .9rem;
+    opacity: .3;
+}
+input[type="submit"]{
+    width: 100px;
+    font-size: 1.125rem;
+    padding: 0.625rem 0px;
+    align-self: flex-end;
+    margin-top: 1.25rem;
+    border: none;
+    background-color: var(--color3);
+    color: var(--color1);
+    border-radius: 3px;
+    cursor: pointer;   
+}
+input[type="submit"]:hover{
+    background-color:var(--color4);
+}
+
+input[type="submit"]{
+    transition: background-color 400ms ease-in;
+}
+.info{
+    display: flex;
+    flex-flow: column nowrap;
+    height: 40%;
+    justify-content: center;
+    padding: 1.875rem;
+}
+.span{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    height: auto;
+    padding: 0.3125rem 0.625rem;
+    margin: 0.625rem 0px;
+    align-items: center;
+}
+.span p{
+    font-size: 1rem;
+    font-family: var(--fuente);
+    font-weight: 500;
+    font-style: normal;
+    color: var(--color3);
+    letter-spacing: 0.0625rem;
+}
+.span i{
+    padding-right: 0.625rem;
+    color: var(--color3);
+    font-size: 1rem;
+}
+.redes{
+    height: 30%;
+    width: 70%;
+    font-size: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.redes i{
+    cursor: pointer;
+}
+
+.redes i:nth-child(1){
+    color: #3b5998;
+}
+.redes i:nth-child(2){
+    color: rgb(56, 144, 207);
+}
+.redes i:nth-child(3){
+    color: #D05260;
+}
+
+/* Medias Queries */
+@media screen and (max-width:1080px){
+    html{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:920px){
+    html{
+        font-size: 13px;
+    }
+    body{
+        height: 100vh;
+    }
+    .contenidoPrincipal{
+        grid-template-rows: 6rem 1fr;
+        margin: 3.125rem auto;
+    }
+    .secionFormulario{
+        width: 100%;
+        grid-template-areas: 'd d'
+                             'c c';
+        padding: 1.25rem 1.125rem 1.25rem 1.25rem;
+    }
+    .informacion{
+        height: 100%;
+        width: 100%;
+        padding-top: 30px;
+    }
+    .redes{
+        height: 60%;
+        width: 100%;
+    }
+}
+@media screen and (max-width:780px){
+    html{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:480px){
+    html{
+        font-size: 10px;
+    }
+}
+/* Fin */
+
+
+
+
+
