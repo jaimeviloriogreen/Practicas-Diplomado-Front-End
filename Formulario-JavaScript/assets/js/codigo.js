@@ -11,11 +11,14 @@ formulario.addEventListener('submit', function(e){
 
      if(nombre == "" || correo == "" || asunto == "" || mensaje == ""){
       alert('¡No se aceptan campos vacíos!')
-          
      }else{
-        console.log(`El Sr. ${nombre} ha enviado un mensaje. El asunto es: ${asunto}. Su correo electrónico es: ${correo} y le ha enviado el siguiente mensaje: ${mensaje}`);
-         formulario.reset();
-         alert('¡Mensaje enviado exitosamente!');
+        if(mensaje.length < 10){
+             alert('!El mensaje debe de ser mayor a 10 carácteres!');
+        }else{
+          console.log(`El Sr. ${nombre} ha enviado un mensaje. El asunto es: ${asunto}. Su correo electrónico es: ${correo} y le ha enviado el siguiente mensaje: ${mensaje}`);
+          formulario.reset();
+          alert('¡Mensaje enviado exitosamente!');
+        }
      }
 
 });
